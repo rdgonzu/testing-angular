@@ -16,6 +16,7 @@ const appRoutes: Routes = [
     {path: 'blog', component: BlogComponent},
     {path: 'form', component: FormComponent},
     {path: 'page', component: PageComponent},
+    {path: 'page/:slug', component: PageComponent},
     {path: '**', component: ErrorComponent}
 ];
 

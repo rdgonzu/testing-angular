@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router, ActivatedRoute, Params} from '@angular/router';
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
-  constructor() { }
+  public slug: string;
+
+  constructor (private _route: ActivatedRoute, private _router: Router) {
+    this.slug = '';
+  }
 
   ngOnInit(): void {
+
+    this._route.params.subscribe((params: Params) => {
+      this.slug = params.slug;
+    });
+
   }
 
 }
