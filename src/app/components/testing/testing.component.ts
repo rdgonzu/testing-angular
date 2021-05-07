@@ -27,7 +27,7 @@ export class TestingComponent implements OnInit, DoCheck {
 
   updateTitle() {
     console.log('This is the DoCheck event.');
-    this.title = 'The title has benn updated';
+    this.title = 'The title has been updated';
   }
 
   updateVisible() {
