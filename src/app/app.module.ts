@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { FormComponent } from './components/form/form.component';
 import { PageComponent } from './components/page/page.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageComponent } from './components/page/page.component';
     HomeComponent,
     BlogComponent,
     FormComponent,
-    PageComponent
+    PageComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

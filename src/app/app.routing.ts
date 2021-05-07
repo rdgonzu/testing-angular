@@ -7,6 +7,7 @@ import {HomeComponent} from './components/home/home.component';
 import {BlogComponent} from './components/blog/blog.component';
 import {FormComponent} from './components/form/form.component';
 import {PageComponent} from './components/page/page.component';
+import { ErrorComponent } from './components/error/error.component';
 
 //Defines routes array.
 const appRoutes: Routes = [
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'blog', component: BlogComponent},
     {path: 'form', component: FormComponent},
-    {path: 'page', component: PageComponent}
+    {path: 'page', component: PageComponent},
+    {path: '**', component: ErrorComponent}
 ];
 
 //Exports module.
