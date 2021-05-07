@@ -21,4 +21,9 @@ export class PageComponent implements OnInit {
 
   }
 
+  redirect () {
+    //Page and params, according to app.router settings.
+    this._router.navigate(['/page', 'testing-redirect']);
+  }
+
 }
