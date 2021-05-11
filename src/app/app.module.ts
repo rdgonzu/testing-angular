@@ -12,6 +12,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { FormComponent } from './components/form/form.component';
 import { PageComponent } from './components/page/page.component';
 import { ErrorComponent } from './components/error/error.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ErrorComponent } from './components/error/error.component';
     BlogComponent,
     FormComponent,
     PageComponent,
-    ErrorComponent
+    ErrorComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

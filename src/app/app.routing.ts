@@ -8,6 +8,7 @@ import {BlogComponent} from './components/blog/blog.component';
 import {FormComponent} from './components/form/form.component';
 import {PageComponent} from './components/page/page.component';
 import { ErrorComponent } from './components/error/error.component';
+import {MoviesComponent} from './components/movies/movies.component';
 
 //Defines routes array.
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
     {path: 'form', component: FormComponent},
     {path: 'page', component: PageComponent},
     {path: 'page/:slug', component: PageComponent},
+    {path: 'movies', component: MoviesComponent},
     {path: '**', component: ErrorComponent}
 ];
 
