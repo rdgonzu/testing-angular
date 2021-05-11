@@ -1,5 +1,9 @@
 <p>page works!</p>
 
-<h1 *ngIf="slug">The slug from url is: {{slug}}</h1>
+<h1 *ngIf="slug; else noParams">The slug from url is: {{slug}}</h1>
+
+<ng-template #noParams>
+    <h1>No params received.</h1>
+</ng-template>
 
 <button (click)="redirect()">Redirect with params</button>
