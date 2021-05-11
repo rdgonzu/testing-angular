@@ -1,9 +1,21 @@
-<p>page works!</p>
+<app-slider [title]="'Page'"></app-slider>
 
-<h1 *ngIf="slug; else noParams">The slug from url is: {{slug}}</h1>
+<div class="center">
 
-<ng-template #noParams>
-    <h1>No params received.</h1>
-</ng-template>
+    <section id="content">
+        
+        <p>page works!</p>
 
-<button (click)="redirect()">Redirect with params</button>
+        <h1 *ngIf="slug; else noParams">The slug from url is: {{slug}}</h1>
+
+        <ng-template #noParams>
+            <h1>No params received.</h1>
+        </ng-template>
+
+        <button (click)="redirect()">Redirect with params</button>
+        
+    </section>
+
+    <app-sidebar></app-sidebar>
+
+</div>

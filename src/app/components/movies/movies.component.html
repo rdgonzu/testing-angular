@@ -1,21 +1,33 @@
-<h2 class="subheader">Movie list</h2>
+<app-slider [title]="'Movies page'"></app-slider>
 
-<div id="articlea" *ngIf="movies">
+<div class="center">
 
-    <article class="article-item" *ngFor="let movie of movies; let i = index;">
+    <section id="content">
+        
+        <h2 class="subheader">Movie list</h2>
 
-        <div class="image-wrap">
-            <img src="{{movie.image}}" alt="{{movie.title}}" />
+        <div id="articlea" *ngIf="movies">
+
+            <article class="article-item" *ngFor="let movie of movies; let i = index;">
+
+                <div class="image-wrap">
+                    <img src="{{movie.image}}" alt="{{movie.title}}" />
+                </div>
+
+                <h2>{{i}} - {{movie.title}}</h2>
+
+                <span class="year" [ngClass]="{'year-green': movie.year > 2016, 'year-red': movie.year <= 2016}">{{movie.year}}</span>
+
+                <a href="#">View more</a>
+
+                <div class="clearfix"></div>
+
+            </article>
+
         </div>
+        
+    </section>
 
-        <h2>{{i}} - {{movie.title}}</h2>
-
-        <span class="year" [ngClass]="{'year-green': movie.year > 2016, 'year-red': movie.year <= 2016}">{{movie.year}}</span>
-
-        <a href="#">View more</a>
-
-        <div class="clearfix"></div>
-
-    </article>
+    <app-sidebar></app-sidebar>
 
 </div>
