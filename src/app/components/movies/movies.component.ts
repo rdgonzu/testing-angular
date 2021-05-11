@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Movie} from '../../models/movie';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  public movies: Array<any>;
+  public movies: Array<Movie>;
 
   constructor () {
 
     this.movies = [
-      {title: 'Movie 1 title', image: 'https://via.placeholder.com/300x300', year: 2020},
-      {title: 'Movie 2 title', image: 'https://via.placeholder.com/300x300', year: 2015},
-      {title: 'Movie 3 title', image: 'https://via.placeholder.com/300x300', year: 2018},
-      {title: 'Movie 4 title', image: 'https://via.placeholder.com/300x300', year: 2017}
+      new Movie('Movie 1 title', 'https://via.placeholder.com/300x300', 2020),
+      new Movie('Movie 2 title', 'https://via.placeholder.com/300x300', 2015),
+      new Movie('Movie 3 title', 'https://via.placeholder.com/300x300', 2018),
+      new Movie('Movie 4 title', 'https://via.placeholder.com/300x300', 2017)
     ];
 
   }
