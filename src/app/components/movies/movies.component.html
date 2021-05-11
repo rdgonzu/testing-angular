@@ -3,10 +3,21 @@
 <div class="center">
 
     <section id="content">
-        
-        <h2 class="subheader">Movie list</h2>
 
-        <app-movie *ngFor="let movie of movies; let i = index;" [movie]="movie" [movieIndex]="i"></app-movie>
+        <div id="featured" *ngIf="featuredMovie.title != ''">
+            <h2 class="subheader">Featured movie</h2>
+            <h4>{{featuredMovie.title}}</h4>
+            <h5>{{featuredMovie.year}}</h5>
+        </div>
+        
+        <h1 class="subheader">Movie list</h1>
+
+        <app-movie
+            *ngFor="let movie of movies; let i = index;"
+            [movie]="movie"
+            [movieIndex]="i"
+            (outputMarkMovieAsFeatured)="showMovieAsFeatured($event)"
+        ></app-movie>
         
     </section>
 

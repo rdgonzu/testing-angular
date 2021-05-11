@@ -8,6 +8,7 @@ import {Movie} from '../../models/movie';
 export class MoviesComponent implements OnInit {
 
   public movies: Array<Movie>;
+  public featuredMovie: Movie = new Movie('', '', 0);
 
   constructor () {
 
@@ -21,6 +22,10 @@ export class MoviesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  showMovieAsFeatured(event: any) {
+    this.featuredMovie = event.movie;
   }
 
 }
