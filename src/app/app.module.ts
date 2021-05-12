@@ -14,7 +14,7 @@ import { PageComponent } from './components/page/page.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieComponent } from './components/movie/movie.component';
-
+import { isEvenPipe } from './pipes/iseven.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { MovieComponent } from './components/movie/movie.component';
     PageComponent,
     ErrorComponent,
     MoviesComponent,
-    MovieComponent
+    MovieComponent,
+    isEvenPipe
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,6 @@ export class Movie {
     */
 
     //Better TypeScript way to define class properties and set values in the constructor:
-    constructor (public title: string, public image: string, public year: number) {}
+    constructor (public title: string, public image: string, public year: number, public date: Date) {}
 
 }

@@ -4,9 +4,9 @@
         <img src="{{movie.image}}" alt="{{movie.title}}" />
     </div>
 
-    <h2>{{movieIndex}} - {{movie.title}}</h2>
+    <h2>{{movieIndex}} - {{movie.title | uppercase}}</h2>
 
-    <span class="year" [ngClass]="{'year-green': movie.year > 2016, 'year-red': movie.year <= 2016}">{{movie.year}}</span>
+    <span class="year" [ngClass]="{'year-green': movie.year > 2016, 'year-red': movie.year <= 2016}">{{movie.year}} ({{movie.year | isEven}}) - {{movie.date | date: 'dd/MM/yyyy'}}</span>
 
     <a href="#">View more</a>
 
