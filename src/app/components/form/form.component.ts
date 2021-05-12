@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  public user: any;
+
+  constructor () {
+
+    this.user = {
+      name: '',
+      lastName: '',
+      bio: '',
+      gender: ''
+    }
+
+  }
 
   ngOnInit(): void {
+  }
+
+  sendUserForm () {
+    console.log(this.user);
   }
 
 }
