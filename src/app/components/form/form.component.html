@@ -37,6 +37,11 @@
 
             <input type="submit" value="Send" class="btn btn-success" [disabled]="userForm.invalid" />
 
+            <h2 class="subheader">Events</h2>
+            <button (click)="buttonClicked()">Click</button>
+            <input type="text" [(ngModel)]="comment" (blur)="leftCommentField()" (keyup.enter)="enterPressed()" />
+            {{comment}}
+
         </form>
 
     </section>

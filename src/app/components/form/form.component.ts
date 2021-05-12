@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent implements OnInit {
 
   public user: any;
+  public comment: string;
 
   constructor () {
 
@@ -18,6 +19,8 @@ export class FormComponent implements OnInit {
       gender: ''
     }
 
+    this.comment = '';
+
   }
 
   ngOnInit(): void {
@@ -25,6 +28,18 @@ export class FormComponent implements OnInit {
 
   sendUserForm () {
     console.log(this.user);
+  }
+
+  buttonClicked () {
+    alert('Button clicked.');
+  }
+
+  leftCommentField () {
+    alert('Left commend field.');
+  }
+
+  enterPressed () {
+    alert('Enter pressed.');
   }
 
 }
