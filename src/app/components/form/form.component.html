@@ -10,28 +10,32 @@
 
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" />
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" required pattern="[a-zA-Z]+" />
+                <small *ngIf="!name.valid && name.touched">Name is not valid.</small>
             </div>
 
             <div class="form-group">
                 <label for="lastName">Last name</label>
-                <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" />
+                <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" required />
+                <small *ngIf="!lastName.valid && lastName.touched">Last name is not valid.</small>
             </div>
 
             <div class="form-group">
                 <label for="bio">Bio</label>
-                <textarea name="bio" #bio="ngModel" [(ngModel)]="user.bio"></textarea>
+                <textarea name="bio" #bio="ngModel" [(ngModel)]="user.bio" required></textarea>
+                <small *ngIf="!bio.valid && bio.touched">Bio is not valid.</small>
             </div>
 
             <div class="form-group radibuttons">
-                <input type="radio" name="gender" value="male" [(ngModel)]="user.gender" /> Male 
-                <input type="radio" name="gender" value="female" [(ngModel)]="user.gender" /> Female 
-                <input type="radio" name="gender" value="other" [(ngModel)]="user.gender" /> Other
+                <input type="radio" name="gender" value="male" #gender="ngModel" [(ngModel)]="user.gender" required /> Male 
+                <input type="radio" name="gender" value="female" #gender="ngModel" [(ngModel)]="user.gender" /> Female 
+                <input type="radio" name="gender" value="other" #gender="ngModel" [(ngModel)]="user.gender" /> Other
+                <small *ngIf="!gender.valid && gender.touched">Gender is not valid.</small>
             </div>
 
             <div class="clearfix"></div>
 
-            <input type="submit" value="Send" class="btn btn-success" />
+            <input type="submit" value="Send" class="btn btn-success" [disabled]="userForm.invalid" />
 
         </form>
 
