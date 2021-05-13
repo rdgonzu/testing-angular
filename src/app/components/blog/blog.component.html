@@ -3,7 +3,31 @@
 <div class="center">
 
     <section id="content">
+
         <h1 class="subheader">Blog page</h1>
+
+        <div id="articles">
+
+            <article class="article-item" *ngFor="let article of articles">
+
+                <div class="image-wrap">
+                    <img src="{{apiUrl + 'get-image/' + article.image}}" alt="{{article.title}}" *ngIf="article.image" />
+                    <img src="https://via.placeholder.com/200x200" alt="{{article.title}}" *ngIf="!article.image" />
+                </div>
+
+                <h2>{{article.title}}</h2>
+                <span class="date">
+                    {{article.date}}
+                </span>
+
+                <a href="#">View more</a>
+
+                <div class="clearfix"></div>
+
+            </article>
+
+        </div>
+
     </section>
 
     <app-sidebar></app-sidebar>
