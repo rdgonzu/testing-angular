@@ -212,7 +212,7 @@ body {
 .btn{
    display: block;
    background: black;
-   color: white;
+   color: white !important;
    padding: 15px; 
    font-weight: bold;
    text-transform: uppercase;
@@ -222,6 +222,8 @@ body {
    transition: 300ms all;
    border: none;
    cursor:pointer;
+   text-align: center;
+   text-decoration: none !important;
 }
 
 .btn-success{
@@ -229,6 +231,14 @@ body {
 }
 
 .btn-success:hover{
+    background:black;
+}
+
+.btn-danger {
+    background: red;
+}
+
+.btn-danger:hover {
     background:black;
 }
 

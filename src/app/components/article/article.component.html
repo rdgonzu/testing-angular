@@ -1,0 +1,29 @@
+<div class="center">
+
+    <section id="content">
+
+        <article class="article-item article-detail">
+
+            <div class="image-wrap">
+                <img src="{{apiUrl + 'get-image/' + article.image}}" alt="{{article.title}}" *ngIf="article.image" />
+                <img src="https://via.placeholder.com/200x200" alt="{{article.title}}" *ngIf="!article.image" />
+            </div>
+
+            <h1 class="subheader">{{article.title}}</h1>
+
+            <span class="date">{{article.date | amLocale: 'es' | amTimeAgo}}</span>
+
+            <p>{{article.content}}</p>
+
+            <a href="#" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">delete</a>
+
+            <div class="clearfix"></div>
+
+        </article>
+
+    </section>
+
+    <app-sidebar></app-sidebar>
+
+</div>

@@ -14,7 +14,7 @@
         {{article.date | amLocale: 'es' | amTimeAgo}}
     </span>
 
-    <a href="#">View more</a>
+    <a [routerLink]="['/blog/article', article._id]">View more</a>
 
     <div class="clearfix"></div>
 
