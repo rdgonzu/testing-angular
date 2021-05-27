@@ -12,8 +12,16 @@ export class ArticleService {
         this.apiUrl = Global.apiUrl;
     }
 
-    getArticles():Observable<any> {
-        return this._http.get(this.apiUrl + 'articles/5');
+    getArticles(numArticles:any = null):Observable<any> {
+
+        let endpoint = 'articles/';
+
+        if (numArticles != null) {
+            endpoint += numArticles;
+        }
+
+        return this._http.get(this.apiUrl + endpoint);
+
     }
 
 }
