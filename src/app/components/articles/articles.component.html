@@ -1,3 +1,7 @@
+<div class="loading" *ngIf="!articles.length">
+    Cargando...
+</div>
+
 <article class="article-item" *ngFor="let article of articles">
 
     <div class="image-wrap">
