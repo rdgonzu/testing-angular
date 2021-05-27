@@ -7,7 +7,7 @@
 
     <h2>{{article.title}}</h2>
     <span class="date">
-        {{article.date}}
+        {{article.date | amLocale: 'es' | amTimeAgo}}
     </span>
 
     <a href="#">View more</a>
