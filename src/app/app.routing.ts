@@ -11,6 +11,7 @@ import { ErrorComponent } from './components/error/error.component';
 import {MoviesComponent} from './components/movies/movies.component';
 import { ArticleComponent } from './components/article/article.component';
 import { SearchComponent } from './components/search/search.component';
+import { ArticleNewComponent } from './components/article-new/article-new.component';
 
 //Defines routes array.
 const appRoutes: Routes = [
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     {path: 'blog', component: BlogComponent},
     {path: 'blog/article/:articleId', component: ArticleComponent},
     {path: 'search/:searchStr', component: SearchComponent},
+    {path: 'blog/create-article', component: ArticleNewComponent},
     {path: 'form', component: FormComponent},
     {path: 'page', component: PageComponent},
     {path: 'page/:slug', component: PageComponent},
