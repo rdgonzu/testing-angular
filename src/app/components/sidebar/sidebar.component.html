@@ -5,12 +5,12 @@
     </div>
 
     <div id="search" class="sidebar-item">
-            <h3>Search</h3>
-            <p>Find articles</p>
-            <form>
-                <input type="text" name="search" />
-                <input type="submit" name="submit" value="Search" class="btn" />
-            </form>
+        <h3>Search</h3>
+        <p>Find articles</p>
+        <form #searchForm="ngForm" (ngSubmit)="searchArticles()">
+            <input type="text" name="search" [(ngModel)]="searchStr" />
+            <input type="submit" name="submit" value="Search" class="btn" />
+        </form>
     </div>
 </aside>
 
