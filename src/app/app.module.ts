@@ -20,6 +20,7 @@ import { MovieComponent } from './components/movie/movie.component';
 import { isEvenPipe } from './pipes/iseven.pipe';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { ArticleComponent } from './components/article/article.component';
+import { SearchComponent } from './components/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ArticleComponent } from './components/article/article.component';
     MovieComponent,
     isEvenPipe,
     ArticlesComponent,
-    ArticleComponent
+    ArticleComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

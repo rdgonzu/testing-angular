@@ -28,4 +28,8 @@ export class ArticleService {
         return this._http.get(this.apiUrl + 'article/' + id);
     }
 
+    search(searchStr:string = ''):Observable<any> {
+        return this._http.get(this.apiUrl + 'search/' + searchStr);
+    }
+
 }
