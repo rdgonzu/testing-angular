@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {routing, appRoutingProviders} from './app.routing';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { MomentModule } from 'angular2-moment'; 
+import { MomentModule } from 'angular2-moment';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -47,7 +48,8 @@ import { ArticleNewComponent } from './components/article-new/article-new.compon
     routing,
     FormsModule,
     HttpClientModule,
-    MomentModule
+    MomentModule,
+    AngularFileUploaderModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

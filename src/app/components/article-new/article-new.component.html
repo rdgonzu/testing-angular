@@ -20,7 +20,8 @@
 
             <div class="form-group">
                 <label for="image">Image</label>
-                <input type="file" name="file0" />
+                <div class="clearfix"></div>
+                <angular-file-uploader [config]="afuConfig" (ApiResponse)="uploadArticleImage($event)"></angular-file-uploader>
             </div>
 
             <h3 *ngIf="status == 'success'">Article created.</h3>
