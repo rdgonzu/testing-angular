@@ -15,8 +15,8 @@
 
             <p>{{article.content}}</p>
 
-            <a href="#" class="btn btn-success">Edit</a>
-            <a href="#" class="btn btn-danger">delete</a>
+            <a [routerLink]="['/blog/edit-article', article._id]" class="btn btn-success">Edit</a>
+            <a (click)="delete(article._id)" class="btn btn-danger">delete</a>
 
             <div class="clearfix"></div>
 

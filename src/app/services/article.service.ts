@@ -41,4 +41,21 @@ export class ArticleService {
 
     }
 
+    update(id: string, article: Article):Observable<any> {
+
+        const params = JSON.stringify(article);
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.put(this.apiUrl + 'article/' + id, params, {headers});
+
+    }
+
+    delete(id: string):Observable<any> {
+
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.delete(this.apiUrl + 'article/' + id, {headers});
+
+    }
+
 }
